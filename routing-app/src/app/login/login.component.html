@@ -1,0 +1,13 @@
+<div class="login">
+	<form [formGroup]="user" (ngSubmit)="(user.valid)? login(): ''">
+		<label for="email">Email</label>
+		<input required type="email" formControlName="email" class="credentials">
+		<label for="password">Password</label><br>
+		<input required type="password" formControlName="password" class="credentials"><br>
+		<input class="remember" type="checkbox" [formControl]="rememberme">
+		<label style="margin-top: 13px; float: left;" for="rememberme">Remember me</label>
+		<input type="submit" value="Login">
+		<a routerLink="/register">Register</a> 
+		<a style="float: right;">Forgot password?</a>
+	</form>
+</div>

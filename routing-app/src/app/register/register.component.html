@@ -1,0 +1,14 @@
+<div class="register">
+	<form [formGroup]="user" (ngSubmit)="(user.valid)? register(): ''">
+		<label for="firstname">First Name:</label>
+		<input class="credentials" type="text" formControlName="firstname">
+		<label for="lastname">Last Name:</label>
+		<input class="credentials" type="text" formControlName="lastname">
+		<label for="email">Email:</label>
+		<input class="credentials" type="email" formControlName="email">
+		<label for="password">Password:</label>
+		<input class="credentials" type="password" formControlName="password" placeholder="Must at least 8 characters">
+		<span>By clicking Register, you agree to <a>User Aggrement</a>, <a>Privacy Policy</a> and <a>Cookie Policy</a></span>
+		<input class="credentials" type="submit" value="Register">
+	</form>
+</div>
